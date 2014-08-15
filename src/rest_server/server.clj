@@ -1,5 +1,6 @@
 (ns rest-server.server
-  (:require [rest-server.routes :refer [main-routes]]
+  (:require [rest-server.const :as const]
+            [rest-server.routes :refer [main-routes]]
             [clojure.string :as string]
             [compojure.route :as route]
             [compojure.core :refer [defroutes]]
@@ -27,4 +28,4 @@
 
 (defn run []
   (httpd/run-server
-    (site (-> main-routes logging)) {:port 9999}))
+    (site (-> main-routes logging)) {:port const/port}))

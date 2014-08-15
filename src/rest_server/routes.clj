@@ -10,5 +10,4 @@
   (OPTIONS "/order/:id" [id] (str "<h2>That order is allowed to...</h2>"))
   (GET "/payment/order/:id" [id] (str "<h2>Payment Status</h2>"))
   (PUT "/payment/order/:id" [id] (str "<h2>Paid for Order " id "</h2>"))
-  (OPTIONS "/payment/order/:id" [id] (str "<h2>That payment can be...</h2>"))
-  )
+  (OPTIONS "/payment/order/:id" [id] (str "<h2>That payment can be...</h2>")))
