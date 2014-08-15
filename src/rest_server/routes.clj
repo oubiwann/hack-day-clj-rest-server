@@ -1,5 +1,6 @@
 (ns rest-server.routes
-	(:require [compojure.core :refer [defroutes POST]]))
+	(:require [compojure.core :refer :all]))
 
 (defroutes main-routes
-  (POST "/order" [] "<h1>Order placed.</h1>"))
+  (POST "/order" [] "<h1>Order placed.</h1>")
+  (GET "/order/:id" [id] (str "<h2>Order " id " is not ready.</h2>")))
